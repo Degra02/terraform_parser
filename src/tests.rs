@@ -12,18 +12,13 @@ fn state() {
         }
     }
 
-    println!("Root module:\n\n");
-    println!("Address: {:?}", state.values.root_module.address);
+    println!("Root module:");
+    println!("Address: {:?}\n", state.values.root_module.address);
+
+    println!("Resources:");
     for resource in state.values.root_module.resources {
         println!("Resource: {}", resource.address);
-        println!("Mode: {:?}", resource.mode);
-        println!("Type: {}", resource.resource_type);
         println!("Name: {}", resource.name);
-        println!("Index: {:?}", resource.index);
-        println!("Provider: {}", resource.provider_name);
-        println!("Schema version: {}", resource.schema_version);
-        println!("Values: {:?}", resource.values);
-        println!("Sensitive values: {:?}", resource.sensitive_values);
         println!();
     }
 }

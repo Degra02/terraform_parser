@@ -20,3 +20,17 @@ resource "docker_container" "ubuntu" {
   publish_all_ports = true
   command = ["tail", "-f", "/dev/null"]
 }
+
+resource "docker_container" "python" {
+  image = "python:3.8"
+  name  = "python"
+  publish_all_ports = true
+  command = ["tail", "-f", "/dev/null"]
+}
+
+resource "docker_container" "azure" {
+  image = "mcr.microsoft.com/azure-cli"
+  name  = "azure"
+  publish_all_ports = true
+  command = ["tail", "-f", "/dev/null"]
+}
