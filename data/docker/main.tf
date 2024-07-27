@@ -1,3 +1,24 @@
+
+variable "sectors" {
+  description = "Sectors the infrastructure is used in"
+  type        = list(string)
+  default     = ["Public Administration", "Finance"]
+}
+
+output "sectors" {
+  value = var.sectors
+}
+
+variable "countries" {
+  description = "Countries the infrastructure is used in"
+  type        = list(string)
+  default     = ["Italy", "France"]
+}
+
+output "countries" {
+  value = var.countries
+}
+
 terraform {
   required_providers {
     docker = {
